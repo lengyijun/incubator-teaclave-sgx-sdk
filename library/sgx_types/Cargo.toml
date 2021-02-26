@@ -15,3 +15,5 @@ name = "sgx_types"
 default = []
 
 [dependencies]
+core={path="../core"}
+compiler_builtins = "0.1.39"

@@ -8,3 +8,7 @@ license-file = "LICENSE"
 documentation = "https://dingelish.github.io/"
 description = "Rust SGX SDK provides the ability to write Intel SGX applications in Rust Programming Language."
 edition = "2018"
+
+[dependencies]
+core={path="../core"}
+compiler_builtins = "0.1.39"

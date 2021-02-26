@@ -28,3 +28,7 @@ doc = false
 
 [build-dependencies]
 sgx_build_helper = { path = "../sgx_build_helper" }
+
+[dependencies]
+core={path="../core"}
+compiler_builtins = "0.1.39"

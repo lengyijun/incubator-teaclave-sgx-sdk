@@ -14,3 +14,8 @@ crate-type = ["rlib"]
 
 [features]
 default = []
+
+[dependencies]
+core={path="../core"}
+alloc={path="../alloc"}
+compiler_builtins = { version = "0.1.0", features = ['rustc-dep-of-std'] }

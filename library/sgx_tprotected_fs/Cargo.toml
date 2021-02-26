@@ -18,3 +18,5 @@ default = []
 [target.'cfg(not(target_env = "sgx"))'.dependencies]
 sgx_types = { path = "../sgx_types" }
 sgx_trts = { path = "../sgx_trts" }
+core={path="../core"}
+compiler_builtins = "0.1.39"
