@@ -17,7 +17,7 @@ default = ["align"]
 align = []
 
 [target.'cfg(all(not(target_env = "sgx"), target_os = "linux", target_arch = "x86_64"))'.dependencies]
-sgx_types = { path = "../sgx_types" }
+sgx_types = { path = "../sgx_types",features=["build-std"] }
 core = { path = "../core" }
 alloc={path="../alloc"}
 compiler_builtins = "0.1.39"

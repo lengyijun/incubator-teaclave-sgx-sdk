@@ -24,7 +24,7 @@ untrusted_fs = []
 untrusted_time = []
 
 [target.'cfg(not(target_env = "sgx"))'.dependencies]
-sgx_types = { path = "../sgx_types" }
+sgx_types = { path = "../sgx_types" ,features=["build-std"]}
 sgx_libc = { path = "../sgx_libc" }
 sgx_trts = { path = "../sgx_trts" }
 sgx_alloc = { path = "../sgx_alloc" }

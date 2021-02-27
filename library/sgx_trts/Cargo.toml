@@ -15,7 +15,7 @@ name = "sgx_trts"
 default = []
 
 [target.'cfg(not(target_env = "sgx"))'.dependencies]
-sgx_types = { path = "../sgx_types" }
+sgx_types = { path = "../sgx_types" ,features=["build-std"]}
 sgx_libc = { path = "../sgx_libc" }
 core={path="../core"}
 alloc={path="../alloc"}

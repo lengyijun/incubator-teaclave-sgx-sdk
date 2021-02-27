@@ -13,7 +13,7 @@ edition = "2018"
 sgx_demangle = { path = "../sgx_demangle" }
 sgx_backtrace_sys = { path = "../sgx_backtrace_sys" }
 sgx_libc = { path = "../sgx_libc" }
-sgx_types = { path = "../sgx_types" }
+sgx_types = { path = "../sgx_types" ,features=["build-std"]}
 sgx_trts = { path = "../sgx_trts" }
 sgx_tstd = { path = "../sgx_tstd", optional = true }
 sgx_unwind = { path = "../sgx_unwind", optional = true }

@@ -20,5 +20,5 @@ signal = []
 
 
 [dependencies]
-sgx_types = { path = "../sgx_types" }
+sgx_types = { path = "../library/sgx_types" }
 libc = "0.2.40"

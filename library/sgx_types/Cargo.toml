@@ -13,7 +13,8 @@ name = "sgx_types"
 
 [features]
 default = []
+build-std=["core","compiler_builtins"]
 
 [dependencies]
-core={path="../core"}
-compiler_builtins = "0.1.39"
+core={path="../core",optional = true}
+compiler_builtins = {version="0.1.39",optional = true}
