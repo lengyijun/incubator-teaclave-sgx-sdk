@@ -33,6 +33,10 @@ ifeq ($(XARGO_SGX), 1)
 	RUST_TARGET_PATH=$(Rust_Target_Path) xargo build --target x86_64-unknown-linux-sgx --release
 	cp ./target/x86_64-unknown-linux-sgx/release/libhelloworldsampleenclave.a ../lib/libenclave.a
 else
-	cargo build --release
-	cp ./target/release/libhelloworldsampleenclave.a ../lib/libenclave.a
+	__CARGO_TESTS_ONLY_SRC_ROOT=~/incubator-teaclave-sgx-sdk cargo b --release --target ~/incubator-teaclave-sgx-sdk/x86_64-unknown-linux-sgx.json -Zbuild-std=core,alloc,std,sgx_types
+	cp ./target/x86_64-unknown-linux-sgx/release/libhelloworldsampleenclave.a ../lib/libenclave.a
 endif
+
+clean:
+	cargo clean
+	rm *.so *.o *.c *.h -rf
